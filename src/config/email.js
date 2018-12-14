@@ -4,11 +4,12 @@ module.exports = {
     port: process.env.PORT_EMAIL,
     secure:false,
     auth:{
-        user: process.env.USER,
-        pass: process.env.PASS
+        user: `${process.env.USER_EMAIL}`,
+        pass: `${process.env.EMAIL_PASS}`
     },
     tls:{
         "rejectUnauthorized":true
     }
-
 }
+
+console.log(process.env.EMAIL_PASS);
