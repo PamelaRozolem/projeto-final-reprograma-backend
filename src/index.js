@@ -21,7 +21,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false})); // explicar para que serve 
+app.use(bodyParser.urlencoded({extended:false}));  
 require('./controllers/exempleController')(app);
 require('./controllers/authController')(app);
 require('./controllers/walletController')(app);
