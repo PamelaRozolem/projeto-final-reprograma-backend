@@ -52,7 +52,7 @@ router.post('/register', async (req,res)=>{
         }
        
         return res.send({
-            message:'Usuario cadastrado com sucesso'
+            message:'Acesse seu email para confirmar sua autenticação'
         });
         
     } catch (error) {
