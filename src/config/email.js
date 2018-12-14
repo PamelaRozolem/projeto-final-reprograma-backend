@@ -11,5 +11,3 @@ module.exports = {
         "rejectUnauthorized":true
     }
 }
-
-console.log(process.env.EMAIL_PASS);
