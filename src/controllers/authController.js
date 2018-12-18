@@ -30,7 +30,7 @@ router.post('/authenticate', async(req,res)=>{
 
     const token = jwt.sign({id:user.id}, settings.secret,{expiresIn:86400});
 
-    res.send({token});
+    res.send({token,user});
 });
 
 router.post('/register', async (req,res)=>{
