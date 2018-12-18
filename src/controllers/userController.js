@@ -9,7 +9,7 @@ router.use(authMiddleware);
 router.get('/', async (req, res) =>{
     try {
         const userId = req.userId;
-        const user = await User.find({_id:userId});
+        const user = await User.findOne({_id:userId});
         return res.json({user});
         
     } catch (error) {
