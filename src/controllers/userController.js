@@ -8,7 +8,8 @@ router.use(authMiddleware);
 router.get('/', async (req, res) =>{
     try {
         const userId = req.userId;
-        const user = await User.find({_id:userId}); 
+        const user = await User.find({_id:userId});
+        user._id = null;
         return res.json({user});
         
     } catch (error) {
@@ -17,4 +18,4 @@ router.get('/', async (req, res) =>{
    
 });
 
- module.exports = app => app.use('/user', router)
+ module.exports = app => app.use(`${Settings.path}/user`, router);
