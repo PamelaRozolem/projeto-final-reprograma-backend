@@ -9,7 +9,6 @@ router.get('/', async (req, res) =>{
     try {
         const userId = req.userId;
         const user = await User.find({_id:userId});
-        user._id = null;
         return res.json({user});
         
     } catch (error) {
